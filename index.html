@@ -381,6 +381,39 @@
             color: var(--gray);
             text-transform: uppercase;
             letter-spacing: 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Social link */
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--black);
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 12px 20px;
+            border: var(--border-thin);
+            background: var(--white);
+            transition: all 0.2s ease;
+        }
+
+        .social-link:hover {
+            background: var(--black);
+            color: var(--white);
+            transform: translate(-4px, -4px);
+            box-shadow: 6px 6px 0 var(--accent);
+        }
+
+        .social-link svg {
+            width: 20px;
+            height: 20px;
         }
 
         /* Responsive */
@@ -472,7 +505,13 @@
         </div>
 
         <div class="footer">
-            // TIME PASSES // NOTHING LASTS //
+            <a href="https://x.com/xcm0215" target="_blank" rel="noopener" class="social-link">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                @xcm0215
+            </a>
+            <span>// TIME PASSES // NOTHING LASTS //</span>
         </div>
     </div>
 
@@ -632,7 +671,7 @@
             document.getElementById('labelToGo').textContent = t.labelToGo;
             document.getElementById('progressLabel').textContent = t.progressLabel;
             document.getElementById('shareButton').textContent = t.shareButton;
-            document.querySelector('.footer').textContent = t.footer;
+            document.querySelector('.footer span').textContent = t.footer;
             document.documentElement.lang = currentLanguage;
             document.title = t.title.replace('<br>', ' ');
         }
